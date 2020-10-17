@@ -19,5 +19,17 @@ RSpec.describe PrettyFractions do
 
       it { expect(pretty_print).to eq '⅛' }
     end
+
+    context 'when zero given' do
+      let(:value) { 0r }
+
+      it { expect(pretty_print).to eq '0' }
+    end
+
+    context 'when a whole given' do
+      let(:value) { 7r }
+
+      it { expect(pretty_print).to eq '7' }
+    end
   end
 end
