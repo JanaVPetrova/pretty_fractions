@@ -29,6 +29,6 @@ module PrettyFractions
   def self.pretty_print(value)
     whole, fraction = value.to_r.divmod(1)
 
-    "#{whole}#{FRACTIONS.fetch(fraction, fraction)}"
+    "#{whole.zero? ? nil : whole}#{FRACTIONS.fetch(fraction, fraction)}"
   end
 end
