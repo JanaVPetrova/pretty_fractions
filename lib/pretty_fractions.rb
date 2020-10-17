@@ -27,8 +27,13 @@ module PrettyFractions
   }.freeze
 
   def self.pretty_print(value)
+    return '0' if value.zero?
+
     whole, fraction = value.to_r.divmod(1)
 
-    "#{whole.zero? ? nil : whole}#{FRACTIONS.fetch(fraction, fraction)}"
+    result_whole = whole.zero? ? nil : whole
+    result_fraction = fraction == 0 ? nil : FRACTIONS.fetch(fraction, fraction)
+
+    [result_whole, result_fraction].compact.join
   end
 end
