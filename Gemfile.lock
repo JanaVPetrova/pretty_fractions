@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pretty_fractions (0.1.0)
+    pretty_fractions (0.1.1)
 
 GEM
   remote: https://rubygems.org/
