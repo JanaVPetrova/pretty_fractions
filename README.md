@@ -21,8 +21,8 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-PrettyFractions.pretty_print(9/8r)
-=> "1⅛"
+PrettyFractions.pretty_print(1/8r)
+=> "⅛"
 ```
 
 ## Development
